@@ -38,7 +38,8 @@ export class Wallet extends Signer implements ExternallyOwnedAccount, TypedDataS
     readonly _mnemonic: () => Mnemonic;
 
     constructor(privateKey: BytesLike | ExternallyOwnedAccount | SigningKey, provider?: Provider) {
-        logger.checkNew(new.target, Wallet);
+        // REMOVE TO SUPPORT >es6 subclasses
+        //logger.checkNew(new.target, Wallet);
 
         super();
 
